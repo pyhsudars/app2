@@ -1,18 +1,18 @@
 {
-    "family": "onescmtaskdefn",
-    "executionRoleArn": "arn:aws:iam::789758938758:role/ecsTaskExecutionRole",
-    "taskRoleArn": "arn:aws:iam::789758938758:role/ecsTaskExecutionRole",
-    "cpu": "2048",
-    "memory": "4096",
+    "family": "onescmtaskdefnapp2",
+    "executionRoleArn": "arn:aws:iam::534817379908:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::534817379908:role/ecsTaskExecutionRole",
+    "cpu": "1024",
+    "memory": "2048",
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "name": "onescmecr",
-            "image": "789758938758.dkr.ecr.us-west-2.amazonaws.com/onescmecr:latest",
+            "name": "onescmcontainerapp2",
+            "image": "534817379908.dkr.ecr.us-west-2.amazonaws.com/onescm/app2:latest",
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/onescmtaskdefn",
+                    "awslogs-group": "/ecs/onescmtaskdefnapp2",
                     "awslogs-region": "us-west-2",
                     "awslogs-stream-prefix": "ecs"
                 }
