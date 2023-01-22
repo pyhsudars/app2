@@ -11,27 +11,27 @@ import org.springframework.web.client.RestTemplate;
 public class InitController {
 	
 	/*Test the rest call*/
-	@GetMapping("/")
+	@GetMapping("/app2path1")
 	public String roothello() {
 		
-		return "all users from root app 2";
+		return "all users from path1 of app 2";
 		
 		
 	}	
-	@GetMapping("/getdetails")
+	@GetMapping("/app2path2")
 	public String hello() {
 		
-		return "all users from path app 2";
+		return "all users from path2 of app 2";
 		
 		
 	}
 
-	@GetMapping("/getdetail")
+	@GetMapping("/app2path3")
 	public ResponseEntity<String> callAppTwo() {
 
 		RestTemplate restTemplate = new RestTemplate();
 		String fooResourceUrl
-				= "http://onescmapploadbalancer-1714328085.us-west-2.elb.amazonaws.com/getdetails";
+				= "http://onescmapploadbalancer-1714328085.us-west-2.elb.amazonaws.com/app1path2";
 		ResponseEntity<String> response
 				= restTemplate.getForEntity(fooResourceUrl , String.class);
 
