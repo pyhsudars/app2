@@ -11,11 +11,17 @@ import org.springframework.web.client.RestTemplate;
 public class InitController {
 	
 	/*Test the rest call*/
-	
+	@GetMapping("/")
+	public String roothello() {
+		
+		return "all users from root app 2";
+		
+		
+	}	
 	@GetMapping("/getdetails")
 	public String hello() {
 		
-		return "all users from app 2";
+		return "all users from path app 2";
 		
 		
 	}
@@ -25,7 +31,7 @@ public class InitController {
 
 		RestTemplate restTemplate = new RestTemplate();
 		String fooResourceUrl
-				= "http://localhost:8080/api/app_2/getdetails";
+				= "http://onescmapploadbalancer-1714328085.us-west-2.elb.amazonaws.com/getdetails";
 		ResponseEntity<String> response
 				= restTemplate.getForEntity(fooResourceUrl , String.class);
 
