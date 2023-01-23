@@ -31,7 +31,7 @@ public class InitController {
 
 		RestTemplate restTemplate = new RestTemplate();
 		String fooResourceUrl
-				= "http://app2.onescm/app1path2";
+				= "http://app1.onescm/app1path2";
 		ResponseEntity<String> response
 				= restTemplate.getForEntity(fooResourceUrl , String.class);
 
