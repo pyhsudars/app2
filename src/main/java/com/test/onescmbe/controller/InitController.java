@@ -31,7 +31,7 @@ public class InitController {
 
 		RestTemplate restTemplate = new RestTemplate();
 		String fooResourceUrl
-				= "http://onescmapploadbalancer-1714328085.us-west-2.elb.amazonaws.com/app1path2";
+				= "http://app2.onescm/app1path2";
 		ResponseEntity<String> response
 				= restTemplate.getForEntity(fooResourceUrl , String.class);
 
