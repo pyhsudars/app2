@@ -6,11 +6,11 @@ on:
     
 env:
   AWS_REGION: us-west-2                 # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: onescm/app2           # set this to your Amazon ECR repository name, my ecr added
-  ECS_SERVICE: onescmserviceapp2                                       # set this to your Amazon ECS service name
-  ECS_CLUSTER: onescmappcluster                                       # set this to your Amazon ECS cluster name
+  ECR_REPOSITORY: app2repo          # set this to your Amazon ECR repository name, my ecr added
+  ECS_SERVICE: app2service                                     # set this to your Amazon ECS service name
+  ECS_CLUSTER: onescmcluster                                       # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .github/workflows/task-defnition.json      # set this to the path to your Amazon ECS task definition
-  CONTAINER_NAME: onescmcontainerapp2                                  # set this to the name of the container in the containerDefinitions section of your task definition
+  CONTAINER_NAME: app2container                                  # set this to the name of the container in the containerDefinitions section of your task definition
   IMAGE_TAG: latest
   
 jobs:
